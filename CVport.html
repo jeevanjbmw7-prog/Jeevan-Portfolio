@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Jeevan Arockia Roshan J · Data Science & AI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -53,8 +53,9 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
-      line-height: 1.65;
+      font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.7;
       transition: background 0.3s, color 0.2s;
       scroll-behavior: smooth;
     }
@@ -76,13 +77,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 0.9rem 2rem;
-      gap: 1.3rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
     }
     .logo {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
-      font-size: 3.3rem;
+      font-size: 1.5rem;
       color: var(--accent);
       letter-spacing: 0.01em;
       white-space: nowrap;
@@ -90,17 +91,16 @@
     .logo span { color: var(--gold); }
     .nav-links {
       display: flex;
-      gap: 1.8rem;
+      gap: 2rem;
       list-style: none;
     }
     .nav-links a {
       text-decoration: none;
       color: var(--text-sub);
       font-weight: 500;
-      font-size: 1.875rem;
+      font-size: 1rem;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--accent); }
     .nav-right { display: flex; align-items: center; gap: 0.75rem; }
@@ -110,7 +110,7 @@
       border-radius: 8px;
       padding: 0.4rem 0.75rem;
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: var(--text-sub);
       display: flex; align-items: center; gap: 0.4rem;
       transition: all 0.2s;
@@ -137,7 +137,7 @@
       gap: 0.5rem;
       background: var(--accent-light);
       color: var(--accent);
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -147,7 +147,7 @@
     }
     .hero-name {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 3.2rem;
+      font-size: 3.8rem;
       font-weight: 700;
       line-height: 1.1;
       color: var(--text);
@@ -159,7 +159,7 @@
       color: var(--accent);
     }
     .hero-title {
-      font-size: 1rem;
+      font-size: 1.15rem;
       font-weight: 500;
       color: var(--text-muted);
       letter-spacing: 0.04em;
@@ -168,9 +168,9 @@
     }
     .hero-desc {
       color: var(--text-sub);
-      font-size: 0.97rem;
+      font-size: 1.1rem;
       max-width: 520px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .hero-right { flex-shrink: 0; }
     .avatar-wrap {
@@ -197,7 +197,7 @@
       flex-wrap: wrap;
     }
     .hack-banner i { color: var(--gold); font-size: 1.3rem; flex-shrink: 0; }
-    .hack-banner span { font-size: 0.9rem; color: var(--text-sub); }
+    .hack-banner span { font-size: 1.05rem; color: var(--text-sub); }
     .hack-banner strong { color: var(--text); }
 
     /* ── DOWNLOAD RESUME BUTTON (hero area) ── */
@@ -218,7 +218,7 @@
       padding: 0.85rem 2rem;
       border-radius: var(--radius);
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: 0.01em;
       cursor: pointer;
@@ -232,7 +232,7 @@
     }
     .download-btn i { font-size: 1rem; }
     .download-hint {
-      font-size: 0.8rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
     }
 
@@ -254,15 +254,13 @@
       margin-bottom: 2rem;
     }
     .section-label {
-      font-size: 0.7rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
-    }
-    .section-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.65rem;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--text);
     }
@@ -292,22 +290,22 @@
     }
     .card-icon i { color: var(--accent); font-size: 1.1rem; }
     .card h3 {
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 0.3rem;
     }
     .card-meta {
-      font-size: 0.82rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--accent);
       margin-bottom: 0.7rem;
       letter-spacing: 0.01em;
     }
     .card p {
-      font-size: 0.9rem;
+      font-size: 1.05rem;
       color: var(--text-sub);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* ── ABOUT ── */
@@ -320,8 +318,8 @@
     }
     .about-card p {
       color: var(--text-sub);
-      font-size: 0.96rem;
-      line-height: 1.75;
+      font-size: 1.1rem;
+      line-height: 1.8;
       margin-bottom: 1rem;
     }
     .about-card p:last-child { margin-bottom: 0; }
@@ -337,7 +335,7 @@
     .skill-group { margin-bottom: 1.4rem; }
     .skill-group:last-child { margin-bottom: 0; }
     .skill-group-label {
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -349,9 +347,9 @@
       background: var(--tag-bg);
       color: var(--text);
       border: 1px solid var(--border);
-      padding: 0.3rem 0.85rem;
+      padding: 0.35rem 1rem;
       border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.95rem;
       font-weight: 500;
     }
 
@@ -370,15 +368,15 @@
       border-color: var(--accent);
     }
     .project-card h4 {
-      font-size: 0.97rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 0.4rem;
     }
     .project-card p {
-      font-size: 0.875rem;
+      font-size: 1.05rem;
       color: var(--text-sub);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* ── CERTIFICATIONS ── */
@@ -390,22 +388,22 @@
     .cert-item:last-child { margin-bottom: 0; }
     .cert-item strong {
       display: block;
-      font-size: 0.93rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 0.1rem;
     }
     .cert-issuer {
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--accent);
       letter-spacing: 0.02em;
       margin-bottom: 0.3rem;
     }
     .cert-item p {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: var(--text-muted);
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     /* ── CONTACT ── */
@@ -458,7 +456,7 @@
     .contact-item:hover .contact-icon i { color: #fff; }
     .contact-text { display: flex; flex-direction: column; align-items: center; text-align: center; }
     .contact-label {
-      font-size: 0.68rem;
+      font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -467,7 +465,7 @@
       margin-bottom: 0.2rem;
     }
     .contact-value {
-      font-size: 0.82rem;
+      font-size: 0.95rem;
       font-weight: 500;
       color: var(--text-sub);
       word-break: break-all;
@@ -490,7 +488,7 @@
       padding: 0.75rem 1.4rem;
       border-radius: var(--radius);
       font-family: inherit;
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s, transform 0.15s;
@@ -507,7 +505,7 @@
       padding: 0.7rem 1.4rem;
       border-radius: var(--radius);
       font-family: inherit;
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
@@ -522,7 +520,7 @@
       margin-top: 2rem;
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.82rem;
+      font-size: 1rem;
     }
 
     /* ── HIDDEN RESUME EXPORT ── */
