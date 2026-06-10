@@ -6,7 +6,6 @@
   <title>Jeevan Arockia Roshan J · Data Science & AI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -60,7 +59,6 @@
       scroll-behavior: smooth;
     }
 
-    /* ── NAVBAR ── */
     .navbar {
       background: var(--nav-bg);
       backdrop-filter: blur(14px);
@@ -118,10 +116,8 @@
     }
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ── CONTAINER ── */
     .wrap { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
 
-    /* ── HERO ── */
     .hero {
       padding: 4.5rem 0 2rem;
       display: flex;
@@ -180,10 +176,11 @@
       display: flex; align-items: center; justify-content: center;
       border: 3px solid var(--border);
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
+    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
     .avatar-wrap i { font-size: 3.9rem; color: var(--accent); opacity: 0.85; }
 
-    /* ── HACKATHON BANNER ── */
     .hack-banner {
       background: var(--gold-light);
       border: 1px solid var(--gold);
@@ -200,7 +197,7 @@
     .hack-banner span { font-size: 1.2rem; color: var(--text-sub); }
     .hack-banner strong { color: var(--text); }
 
-    /* ── DOWNLOAD RESUME BUTTON (hero area) ── */
+    /* ── DOWNLOAD BUTTON ── */
     .download-zone {
       display: flex;
       align-items: center;
@@ -224,6 +221,7 @@
       cursor: pointer;
       box-shadow: 0 4px 16px rgba(26,58,107,0.25);
       transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      text-decoration: none;
     }
     .download-btn:hover {
       background: var(--accent-mid);
@@ -236,17 +234,13 @@
       color: var(--text-muted);
     }
 
-    /* ── DIVIDER ── */
     .section-divider {
       height: 1px;
       background: var(--border);
       margin: 0.5rem 0;
     }
 
-    /* ── SECTIONS ── */
-    .section {
-      padding: 3rem 0 2rem;
-    }
+    .section { padding: 3rem 0 2rem; }
     .section-header {
       display: flex;
       align-items: baseline;
@@ -267,7 +261,6 @@
       color: var(--text);
     }
 
-    /* ── CARDS ── */
     .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; }
     .card {
       background: var(--surface);
@@ -291,26 +284,10 @@
       flex-shrink: 0;
     }
     .card-icon i { color: var(--accent); font-size: 1.25rem; }
-    .card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.3rem;
-    }
-    .card-meta {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 0.7rem;
-      letter-spacing: 0.01em;
-    }
-    .card p {
-      font-size: 1.2rem;
-      color: var(--text-sub);
-      line-height: 1.7;
-    }
+    .card h3 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
+    .card-meta { font-size: 1.1rem; font-weight: 600; color: var(--accent); margin-bottom: 0.7rem; letter-spacing: 0.01em; }
+    .card p { font-size: 1.2rem; color: var(--text-sub); line-height: 1.7; }
 
-    /* ── ABOUT ── */
     .about-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -318,15 +295,9 @@
       padding: 2rem 2.2rem;
       box-shadow: var(--shadow);
     }
-    .about-card p {
-      color: var(--text-sub);
-      font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
+    .about-card p { color: var(--text-sub); font-size: 1.25rem; line-height: 1.8; margin-bottom: 1rem; }
     .about-card p:last-child { margin-bottom: 0; }
 
-    /* ── SKILLS ── */
     .skills-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -336,26 +307,10 @@
     }
     .skill-group { margin-bottom: 1.4rem; }
     .skill-group:last-child { margin-bottom: 0; }
-    .skill-group-label {
-      font-size: 1.05rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 0.6rem;
-    }
+    .skill-group-label { font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.6rem; }
     .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .pill {
-      background: var(--tag-bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-      padding: 0.35rem 1rem;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
+    .pill { background: var(--tag-bg); color: var(--text); border: 1px solid var(--border); padding: 0.35rem 1rem; border-radius: 6px; font-size: 1.1rem; font-weight: 500; }
 
-    /* ── PROJECTS ── */
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -364,171 +319,44 @@
       box-shadow: var(--shadow);
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-      border-color: var(--accent);
-    }
-    .project-card h4 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.4rem;
-    }
-    .project-card p {
-      font-size: 1.2rem;
-      color: var(--text-sub);
-      line-height: 1.65;
-    }
+    .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: var(--accent); }
+    .project-card h4 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+    .project-card p { font-size: 1.2rem; color: var(--text-sub); line-height: 1.65; }
 
-    /* ── CERTIFICATIONS ── */
-    .cert-item {
-      padding: 1rem 0 1rem 1.2rem;
-      border-left: 2px solid var(--border);
-      margin-bottom: 1.2rem;
-    }
+    .cert-item { padding: 1rem 0 1rem 1.2rem; border-left: 2px solid var(--border); margin-bottom: 1.2rem; }
     .cert-item:last-child { margin-bottom: 0; }
-    .cert-item strong {
-      display: block;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.1rem;
-    }
-    .cert-issuer {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-      margin-bottom: 0.3rem;
-    }
-    .cert-item p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+    .cert-item strong { display: block; font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.1rem; }
+    .cert-issuer { font-size: 1.05rem; font-weight: 600; color: var(--accent); letter-spacing: 0.02em; margin-bottom: 0.3rem; }
+    .cert-item p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
 
-    /* ── CONTACT ── */
-    .contact-grid {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2rem 2.2rem;
-      box-shadow: var(--shadow);
-    }
-    .contact-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      justify-content: center;
-      margin-bottom: 1.8rem;
-    }
+    .contact-grid { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem 2.2rem; box-shadow: var(--shadow); }
+    .contact-list { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 1.8rem; }
     .contact-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
-      text-decoration: none;
-      color: var(--text);
-      padding: 1.2rem 1.6rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--surface-2);
-      transition: all 0.2s;
-      min-width: 130px;
-      flex: 1;
+      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+      text-decoration: none; color: var(--text);
+      padding: 1.2rem 1.6rem; border-radius: var(--radius); border: 1px solid var(--border);
+      background: var(--surface-2); transition: all 0.2s; min-width: 130px; flex: 1;
     }
-    .contact-item:hover {
-      background: var(--accent-light);
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-hover);
-    }
-    .contact-icon {
-      width: 52px; height: 52px;
-      background: var(--accent-light);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: background 0.2s;
-    }
+    .contact-item:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .contact-icon { width: 52px; height: 52px; background: var(--accent-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
     .contact-item:hover .contact-icon { background: var(--accent); }
     .contact-icon i { color: var(--accent); font-size: 1.55rem; transition: color 0.2s; }
     .contact-item:hover .contact-icon i { color: #fff; }
     .contact-text { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .contact-label {
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      line-height: 1;
-      margin-bottom: 0.2rem;
-    }
-    .contact-value {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--text-sub);
-      word-break: break-all;
-    }
+    .contact-label { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); line-height: 1; margin-bottom: 0.2rem; }
+    .contact-value { font-size: 1.1rem; font-weight: 500; color: var(--text-sub); word-break: break-all; }
     .contact-item:hover .contact-value { color: var(--accent); }
-    .contact-actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .contact-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.55rem;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.4rem;
-      border-radius: var(--radius);
-      font-family: inherit;
-      font-size: 1.15rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      background: var(--accent); color: #fff; border: none; padding: 0.75rem 1.4rem;
+      border-radius: var(--radius); font-family: inherit; font-size: 1.15rem; font-weight: 600;
+      cursor: pointer; transition: background 0.2s, transform 0.15s;
     }
     .btn-primary:hover { background: var(--accent-mid); transform: translateY(-1px); }
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.55rem;
-      background: transparent;
-      color: var(--accent);
-      border: 1.5px solid var(--accent);
-      padding: 0.7rem 1.4rem;
-      border-radius: var(--radius);
-      font-family: inherit;
-      font-size: 1.15rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-    }
-    .btn-outline:hover { background: var(--accent-light); }
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 0;
-      margin-top: 2rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 1.15rem;
-    }
+    footer { border-top: 1px solid var(--border); padding: 2rem 0; margin-top: 2rem; text-align: center; color: var(--text-muted); font-size: 1.15rem; }
 
-    /* ── HIDDEN RESUME EXPORT ── */
-    #resume-export-content { display: none; }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 820px) {
       .nav-inner { flex-direction: column; align-items: flex-start; padding: 0.9rem 1.2rem; }
       .nav-links { gap: 1.2rem; flex-wrap: wrap; }
@@ -546,7 +374,6 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-inner">
       <div class="logo">Jeevan Arockia Roshan <span>J</span></div>
@@ -569,7 +396,6 @@
 
   <main class="wrap">
 
-    <!-- HOME / HERO -->
     <section id="home">
       <div class="hero">
         <div class="hero-left">
@@ -577,29 +403,46 @@
           <h1 class="hero-name">Jeevan Arockia<br><em>Roshan J</em></h1>
           <div class="hero-title">Data Science &amp; AI · Machine Learning Engineer</div>
           <p class="hero-desc">MCA candidate specialising in intelligent systems, predictive analytics, and scalable data pipelines. Building AI-driven solutions for agriculture, education, and enterprise.</p>
+
           <div class="download-zone">
-            <button class="download-btn" id="downloadPdfBtn">
+            <!--
+              =====================================================================
+              RESUME DOWNLOAD — HOW TO USE:
+              
+              Option 1 (RECOMMENDED): Place your PDF resume file in the same folder
+              as this HTML file, name it "resume.pdf", and this button will
+              directly download it. Change the filename below if yours differs.
+              
+              Option 2: Use a full path, e.g.:
+                href="C:/Users/YourName/Documents/Jeevan_Resume.pdf"
+                (Note: absolute local paths only work if opened from a local server)
+              
+              Option 3: Upload your resume to Google Drive / Dropbox / any hosting,
+              paste the direct download link in href below.
+              =====================================================================
+            -->
+            <a class="download-btn" href="JEEVAN_AROCKIA_ROSHAN_J_FlowCV_Resume_2026-06-09.pdf" download="Jeevan_Arockia_Roshan_Resume.pdf" id="downloadResumeBtn">
               <i class="fas fa-file-arrow-down"></i> Download Resume
-            </button>
+            </a>
             <span class="download-hint">PDF · A4 · Updated 2026</span>
           </div>
         </div>
         <div class="hero-right">
-         <div class="avatar-wrap">
-  <img src="pic.jpg" alt="Jeevan Arockia Roshan J" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-</div>
-
+          <div class="avatar-wrap">
+            <img src="pic.jpg" alt="Jeevan Arockia Roshan J" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <i class="fas fa-user" style="display:none;"></i>
+          </div>
         </div>
       </div>
 
       <div class="hack-banner">
+        <i class="fas fa-trophy"></i>
         <span><strong>Innovate Hack 2026</strong> — 32-Hour Hackathon Participant · St. Philomena College (Autonomous), Puttur, Karnataka</span>
       </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="section">
         <div class="section-header">
@@ -615,7 +458,6 @@
 
     <div class="section-divider"></div>
 
-    <!-- EDUCATION -->
     <section id="education">
       <div class="section">
         <div class="section-header">
@@ -641,7 +483,6 @@
 
     <div class="section-divider"></div>
 
-    <!-- SKILLS -->
     <section id="skills">
       <div class="section">
         <div class="section-header">
@@ -687,7 +528,6 @@
 
     <div class="section-divider"></div>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <div class="section">
         <div class="section-header">
@@ -721,7 +561,6 @@
 
     <div class="section-divider"></div>
 
-    <!-- CERTIFICATIONS -->
     <section id="certificates">
       <div class="section">
         <div class="section-header">
@@ -759,7 +598,6 @@
 
     <div class="section-divider"></div>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="section">
         <div class="section-header">
@@ -768,7 +606,6 @@
         </div>
         <div class="contact-grid">
           <div class="contact-list">
-
             <a class="contact-item" href="mailto:jeevanjj6366@gmail.com" id="emailTrigger">
               <div class="contact-icon"><i class="fas fa-envelope"></i></div>
               <div class="contact-text">
@@ -776,7 +613,6 @@
                 <span class="contact-value">jeevanjj6366@gmail.com</span>
               </div>
             </a>
-
             <a class="contact-item" href="tel:+916366071477">
               <div class="contact-icon"><i class="fas fa-phone"></i></div>
               <div class="contact-text">
@@ -784,7 +620,6 @@
                 <span class="contact-value">+91 63660 71477</span>
               </div>
             </a>
-
             <a class="contact-item" href="https://github.com/jeevanjbmw7-prog" target="_blank" rel="noopener">
               <div class="contact-icon"><i class="fab fa-github"></i></div>
               <div class="contact-text">
@@ -792,7 +627,6 @@
                 <span class="contact-value">github.com/jeevanjbmw7-prog</span>
               </div>
             </a>
-
             <a class="contact-item" href="https://linkedin.com/in/jeevan-arockia" target="_blank" rel="noopener">
               <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
               <div class="contact-text">
@@ -800,9 +634,7 @@
                 <span class="contact-value">linkedin.com/in/jeevan-arockia</span>
               </div>
             </a>
-
           </div>
-
           <div class="contact-actions">
             <button class="btn-primary" id="composeEmailBtn">
               <i class="fas fa-paper-plane"></i> Send Message
@@ -820,61 +652,25 @@
     </div>
   </footer>
 
-  <!-- HIDDEN RESUME CONTENT FOR PDF -->
-  <div id="resume-export-content">
-    <div style="font-family:'Times New Roman',Times,serif;max-width:740px;margin:0 auto;padding:2.5rem;background:#fff;color:#111827;">
-      <h1 style="font-size:2rem;font-weight:700;margin-bottom:0.15rem;color:#111827;">Jeevan Arockia Roshan J</h1>
-      <p style="color:#1a3a6b;font-weight:600;font-size:1rem;margin-bottom:0.5rem;">Data Science &amp; AI · Machine Learning Engineer</p>
-      <p style="font-size:0.82rem;color:#6b7280;margin-bottom:1.2rem;">jeevanjj6366@gmail.com &nbsp;|&nbsp; +91 6366071477 &nbsp;|&nbsp; github.com/jeevanjbmw7-prog &nbsp;|&nbsp; linkedin.com/in/jeevan-arockia</p>
-      <hr style="border:none;border-top:2px solid #1a3a6b;margin-bottom:1.4rem;">
-
-      <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1a3a6b;margin-bottom:0.5rem;">Professional Summary</h2>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:1.4rem;">MCA candidate with expertise in Python, machine learning algorithms, and data analytics. Passionate about leveraging AI to solve real-world problems, with project experience spanning agriculture, education, and full-stack systems.</p>
-
-      <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1a3a6b;margin-bottom:0.5rem;">Education</h2>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.3rem;"><strong>Master of Computer Applications</strong> — St. Philomena College (Autonomous), Puttur · 2025–Present</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:1.4rem;"><strong>BSc (Computer Science)</strong> — St. Philomena College (Autonomous) · Mysore University</p>
-
-      <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1a3a6b;margin-bottom:0.5rem;">Technical Skills</h2>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:1.4rem;">Python · SQL · PHP · Pandas · NumPy · Scikit-learn · XGBoost · Deep Learning · MongoDB · MySQL · Git · Jupyter · Excel</p>
-
-      <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1a3a6b;margin-bottom:0.5rem;">Projects</h2>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.4rem;"><strong>Smart Agriculture — Yield Prediction:</strong> Random Forest regression achieving 87% accuracy using soil and climate datasets.</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.4rem;"><strong>Student Dropout Prediction:</strong> XGBoost/Logistic Regression classification with institutional early-alert integration.</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.4rem;"><strong>Learning Management System:</strong> Full-stack PHP/MySQL platform with authentication, quiz engine, and instructor panel.</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:1.4rem;"><strong>MongoDB Vector Search + AI:</strong> Semantic document retrieval prototype using Atlas Vector Search and embeddings.</p>
-
-      <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1a3a6b;margin-bottom:0.5rem;">Certifications</h2>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.3rem;">Cybersecurity &amp; Digital Forensics — Talfor (30 hrs)</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.3rem;">Getting Started with Artificial Intelligence — IBM SkillsBuild</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:0.3rem;">Introduction to MongoDB — MongoDB University</p>
-      <p style="font-size:0.88rem;color:#374151;margin-bottom:1.4rem;">MongoDB Professional Learning Path — MongoDB (Atlas &amp; Developer)</p>
-
-      <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:#1a3a6b;margin-bottom:0.5rem;">Achievements</h2>
-      <p style="font-size:0.88rem;color:#374151;">Innovate Hack 2026 — 32-Hour Hackathon Participant, St. Philomena College (Autonomous), Puttur</p>
-    </div>
-  </div>
-
   <script>
   (function () {
     // Theme toggle
     const btn = document.getElementById('themeToggleBtn');
-    const txt = document.getElementById('themeText');
     const saved = localStorage.getItem('theme');
     if (saved === 'dark') {
       document.body.classList.add('dark');
-      btn.innerHTML = '<i class="fas fa-sun"></i> <span id="themeText">Light mode</span>';
+      btn.innerHTML = '<i class="fas fa-sun"></i> <span>Light mode</span>';
     }
     btn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       const dark = document.body.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
       btn.innerHTML = dark
-        ? '<i class="fas fa-sun"></i> <span id="themeText">Light mode</span>'
-        : '<i class="fas fa-moon"></i> <span id="themeText">Dark mode</span>';
+        ? '<i class="fas fa-sun"></i> <span>Light mode</span>'
+        : '<i class="fas fa-moon"></i> <span>Dark mode</span>';
     });
 
-    // Email
+    // Email compose
     function openMail() {
       const sub = encodeURIComponent('Opportunity / Collaboration Inquiry');
       const body = encodeURIComponent('Hello Jeevan,\n\nI came across your portfolio and would like to connect regarding...');
@@ -882,53 +678,29 @@
     }
     document.getElementById('composeEmailBtn').addEventListener('click', openMail);
     document.getElementById('emailTrigger').addEventListener('click', function(e) {
-      e.preventDefault(); openMail();
+      e.preventDefault();
+      openMail();
     });
-
-    // PDF Download
-    async function downloadPDF() {
-      const btn = document.getElementById('downloadPdfBtn');
-      const origText = btn.innerHTML;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
-      btn.disabled = true;
-
-      // Build a fresh styled wrapper and append to body so html2canvas can render it
-      const source = document.getElementById('resume-export-content');
-      const wrapper = document.createElement('div');
-      wrapper.style.cssText = 'position:fixed;left:-9999px;top:0;width:800px;background:#fff;z-index:-1;';
-      wrapper.innerHTML = source.innerHTML;
-      document.body.appendChild(wrapper);
-
-      const opt = {
-        margin: [0.45, 0.45, 0.45, 0.45],
-        filename: 'Jeevan_Roshan_Resume.pdf',
-        image: { type: 'jpeg', quality: 0.99 },
-        html2canvas: { scale: 2, useCORS: true, logging: false, allowTaint: true },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-      };
-
-      try {
-        await html2pdf().set(opt).from(wrapper).save();
-      } catch(e) {
-        alert('PDF generation failed. Please use Ctrl+P → Save as PDF instead.');
-        console.error(e);
-      } finally {
-        document.body.removeChild(wrapper);
-        btn.innerHTML = origText;
-        btn.disabled = false;
-      }
-    }
-    document.getElementById('downloadPdfBtn').addEventListener('click', downloadPDF);
 
     // Smooth scroll
     document.querySelectorAll('.nav-links a').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
         const id = a.getAttribute('href').slice(1);
-        const target = id === 'home' ? document.body : document.getElementById(id);
         if (id === 'home') window.scrollTo({ top: 0, behavior: 'smooth' });
-        else if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        else {
+          const target = document.getElementById(id);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
+    });
+
+    // Warn if resume file not found (only works when served via a web server)
+    document.getElementById('downloadResumeBtn').addEventListener('click', function(e) {
+      // If you need to check file existence dynamically via fetch (local server only):
+      // fetch('resume.pdf', { method: 'HEAD' }).catch(() => {
+      //   alert('resume.pdf not found. Place your resume PDF in the same folder as this HTML file.');
+      // });
     });
   })();
   </script>
